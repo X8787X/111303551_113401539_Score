@@ -10,7 +10,13 @@ Original file is located at
 INPUT=input()
 score=INPUT.split()
 fail=0
+max=0
+min=100
 for i in range(len(score)):
+  if int(score[i])<min:
+    min=int(score[i])
+  if int(score[i])>max:
+    max=int(score[i])
   if int(score[i])<60:
         fail+=1
-print(fail)
+print('Fail= ',fail,',Max= ',max,',Min= ',min)
